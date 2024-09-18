@@ -1,39 +1,32 @@
-const express = require("express");
+const express = require('express');
 const bodyParser = require("body-parser");
+// baseUrl = http://localhost:8080
 
 const app = express();
-const port = 8080;
-
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-// Armazena os usuários em memória
-let usuarios = [];
+const clientes = [{
+    id: 1,
+    nome: "Diovana",
+    email: "dhiovana.daldin@gmail.com",
+    senha: "123456"
+}];
 
-// Endpoint POST para cadastro de usuário
-app.post('/cadastro', (req, res) => {
-    const { id, nome, email, senha } = req.body;
 
-    // Verificar se o ID já existe
-    const usuarioExistente = usuarios.find(usuario => usuario.id === id);
-    if (usuarioExistente) {
-        return res.status(400).json({ message: 'ID já cadastrado.' });
-    }
+app.post("/cadastro", (request, response) => {
 
-    // Adicionar novo usuário ao array
-    const novoUsuario = { id, nome, email, senha };
-    usuarios.push(novoUsuario);
+    clientes.push(request.body);
+    
+    response.status(200).send(clientes);
 
-    res.status(201).json({ message: 'Usuário cadastrado com sucesso.', usuario: novoUsuario });
-});
+})
 
-// Endpoint GET para consulta de todos os usuários
-app.get('/consulta', (req, res) => {
-    res.status(200).json(usuarios);
-});
+app.get("/consulta", (request, response) => {
+    response.status(200).send(clientes);
+})
 
-// Iniciar o servidor
-app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
-});
-
+app.listen(8080, () => {
+    console.log("O servidor esta rodando na porta 8080");
+})
