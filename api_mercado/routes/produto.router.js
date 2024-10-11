@@ -1,5 +1,5 @@
-const express = require("express").Router();
-const clienteController = require("../controller.cliente.controller");
+const routes = require("express").Router();
+
 //crud
 
 routes.post("/",() => { });

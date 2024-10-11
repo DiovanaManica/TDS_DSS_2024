@@ -35,3 +35,9 @@ CREATE TABLE Mercado.pedido(
     quantidade INT,
     total DECIMAL(9,2)
 ); 
+
+
+INSERT INTO mercado.cliente(nome, telefone)
+VALUES("Diovana Manica", "46999406080");
+
+SELECT * FROM cliente;

@@ -1,10 +1,10 @@
 const routes = require ("express").Router();
-const clienteRouter = requirec("../cliente.router");
-const produtoRouter = requirec("../produto.router");
-const pedidoRouter = requirec("../pedido.router");
+const clienteRouter = require("./cliente.router");
+const produtoRouter = require("./produto.router");
+const pedidoRouter = require("./pedido.router");
 
 routes.use("/cliente", clienteRouter);
-routes.use("/produto", clienteRouter);
-routes.use("/pedido", clienteRouter);
+routes.use("/produto", produtoRouter);
+routes.use("/pedido", pedidoRouter);
 
 module.exports = routes;
