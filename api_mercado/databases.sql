@@ -38,6 +38,6 @@ CREATE TABLE Mercado.pedido(
 
 
 INSERT INTO mercado.cliente(nome, telefone)
-VALUES("Diovana Manica", "46999406080");
+VALUES("Marcos Renato", "46999298875");
 
 SELECT * FROM cliente;
