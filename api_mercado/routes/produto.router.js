@@ -1,10 +1,10 @@
 const routes = require("express").Router();
+const produtoController = require("../controller/produto.controller");
 
-//crud
-
-routes.post("/",() => { });
-routes.get("/", () => { });
-routes.put("/:ra([0-9]+)", () => { });
-routes.delete("/:ra([0-9]+)", () => { });
+// CRUD de produtos
+routes.post("/", produtoController.cadastro);
+routes.get("/", produtoController.consultar);
+routes.put("/:id([0-9]+)", produtoController.atualizar);
+routes.delete("/:id([0-9]+)", produtoController.deletar);
 
 module.exports = routes;
