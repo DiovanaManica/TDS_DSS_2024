@@ -1,10 +1,11 @@
 const routes = require("express").Router();
+const pedidoController = require("../controller/pedido.controller");
 
-//crud
 
-routes.post("/",() => { });
+//CRUD
+routes.post("/", pedidoController.cadastrar);
 routes.get("/", () => { });
-routes.put("/:ra([0-9]+)", () => { });
-routes.delete("/:ra([0-9]+)", () => { });
+routes.put("/:id([0-9]+)", () => { });
+routes.delete("/:id([0-9]+)", () => { });
 
 module.exports = routes;
