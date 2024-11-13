@@ -1,13 +1,41 @@
-import Teste from "./Teste.jsx"
+import Titulo from "./Titulo.jsx"
+import "./App.css"
+import { useState } from "react";
 
 function App() {
-  
-  return (
-    <>
-   <h1> Ola Mundo!</h1>
-    <Teste/>
-   </>
-  )
+    const [contador, setContador] = useState(1);
+    const [nome, setNome] = useState("Diovana");
+    const [email, setEmail] = useState("dhiovana.daldin@gmail.com");
+
+    return (
+        <>
+            <Titulo />
+            <h2>{contador}</h2>
+            <button onClick={() => (
+                setContador(contador + 1)
+            )}>+</button>
+            <button onClick={() => (
+                setContador(contador - 1)
+            )}>-</button>
+
+            <h1>Cadastro</h1>
+            {nome} - {email}
+            <div>
+                <input type="text"
+                    placeholder="Nome"
+                    onChange={(e) => (
+                        setNome(e.target.value)
+                    )} />
+
+                <input type="email"
+                    placeholder="email"
+                    onChange={(e) => (
+                        setNome(e.target.value)
+                    )} /> 
+
+            </div>   
+        </>
+    )
 }
 
 export default App
