@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compilar C",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-o", "main",  // Nome do arquivo de saída
+                "main.c",      // Arquivo de entrada
+                "arquivos.h",  // Arquivo de cabeçalho
+                "dadosSistema.h"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compilar o código C"
+        }
+    ]
+}

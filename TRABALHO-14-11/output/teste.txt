@@ -1,0 +1,46 @@
+Joao da Silva  Nunes                                        42 3353 8008                  
+TEletromecanico                Rua Dom Pedro                                         123
+Alice Abraao dos Santos                                     41 3576 7980
+TAdministrativo                Rua das Neves                                         817
+Alberto Mour  Vasquez                                       40 1923 3536                
+TContabilidade                 Rua das Torres                                        912 
+Eduardo Motta Moura                                         97 7867 1234                
+Qadministrativo                Rua tal                                               123
+Sandro Tsunaga Massa                                        01 8401 0021                
+TEletrotecnica                 Avenida Presidente Prudente                           776
+Jose Alberto Cunha                                          47 0101 5421                
+QAutomacao Industrial          Rua dos pombos                                        000
+Maria Silva                                                 46 7678 1234
+TContabilidade                 Rua Antonio Peres                                     176
+Ana Oliveira Santos                                         88 0909 8007
+TAdministrativo                Rua Joao Laca                                         032
+Carlos Pereira Costa                                        46 6321 2134
+QAutomacao Industrial          Rua Barao Amargado                                    112
+Antonio Fernando Fonseca                                    46 0132 1234
+TAdministrativo                Rua Julio Silvino                                     031
+Luisa Gomes                                                 42 5623 4931
+TEletrotecnica                 Rua Vinte                                             200
+Ricardo Marques                                             47 9877 0910
+TEletrotecnica                 Rua Terra Nova                                        037
+Beatriz Carvalho                                            44 5632 7319
+TContabilidade                 Rua Bela Vista                                        277
+Alice Duarte Pereira                                        41 7667 8932
+TAdministrativo                Rua Lago Verde                                        187
+Laura Santos Rodrigues                                      42 0989 7890
+TContabilidade                 Rua Manoel Costa Gomes                                532
+Francisca Oliveira                                          46 4532 7763
+TEletrotecnica                 Rua Luiz Clemente                                     451
+Catarina Almeida                                            42 4323 3387
+TAdministrativo                Rua Camilo Silva                                      222
+Camila Silva                                                46 9087 6761
+TContabilidade                 Avenida Oito                                          033
+Clara Correia Santos                                        46 3521 3421
+TAdministrativo                Rua Venda Grande                                      215
+Laura Fernandes de Barros                                   46 6723 4099
+TAdministrativo                Rua Sao Sebastian                                     432
+Renan Gomes Dias                                            42 6753 2901
+TEletromecanica                Rua Jose Alberto                                      455
+Rafaela Cardoso                                             46 8401 8827                  
+TContabilidade                 Rua Rodrigues Abreu                                   215
+Lavinia Correia                                             46 3208 5900                  
+QPanificacao                   Rua Professor Sigefredo                               081  
