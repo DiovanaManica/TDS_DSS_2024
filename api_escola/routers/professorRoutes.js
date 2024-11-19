@@ -1,11 +1,12 @@
-const express = require('express');
-const ProfessorController = require('../controllers/ProfessorController');
-const router = express.Router();
+const express = require("express");
+const professorController = require("../controller/ProfessorController");
 
-router.get('/professores', ProfessorController.listarTodos);
-router.get('/professores/:id', ProfessorController.buscarPorID);
-router.post('/professores', ProfessorController.cadastrar);
-router.put('/professores/:id', ProfessorController.atualizar);
-router.delete('/professores/:id', ProfessorController.deletar);
+const routes = express.Router();
 
-module.exports = router;
+//CRUD
+routes.post("/", professorController.cadastrar);
+routes.get("/", professorController.consultar);
+routes.put("/", professorController.atualizar);
+routes.delete("/", professorController.deletar)
+
+module.exports = routes;

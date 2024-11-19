@@ -1,11 +1,12 @@
-const express = require('express');
-const TurmaController = require('../controllers/TurmaController');
-const router = express.Router();
+const express = require("express");
+const turmaController = require("../controller/TurmaController");
 
-router.get('/turmas', TurmaController.listarTodos);
-router.get('/turmas/:id', TurmaController.buscarPorID);
-router.post('/turmas', TurmaController.cadastrar);
-router.put('/turmas/:id', TurmaController.atualizar);
-router.delete('/turmas/:id', TurmaController.deletar);
+const routes = express.Router();
 
-module.exports = router;
+//CRUD
+routes.post("/", turmaController.cadastrar);
+routes.get("/", turmaController.consultar);
+routes.put("/", turmaController.atualizar);
+routes.delete("/", turmaController.deletar)
+
+module.exports = routes;

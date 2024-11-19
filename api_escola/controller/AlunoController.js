@@ -1,52 +1,56 @@
-const AlunoModel = require('../models/AlunoModel');
+const alunos = [];
 
-const AlunoController = {
-    listarTodos: (req, res) => {
-        const alunos = AlunoModel.listarTodos();
-        res.json(alunos);
-    },
-
-    buscarPorID: (req, res) => {
-        const { id } = req.params;
-        const aluno = AlunoModel.buscarPorID(id);
-        if (aluno) {
-            res.json(aluno);
-        } else {
-            res.status(404).send(`Aluno com ID ${id} não encontrado.`);
-        }
-    },
-
+//CRUD
+module.exports = ({
     cadastrar: (req, res) => {
-        const { id, nome, idade } = req.body;
-        const alunoExistente = AlunoModel.buscarPorID(id);
-        if (alunoExistente) {
-            res.status(400).send(`Aluno com ID ${id} já existe.`);
-        } else {
-            AlunoModel.cadastrar({ id, nome, idade });
-            res.status(201).send(`Aluno com ID ${id} cadastrado com sucesso.`);
-        }
-    },
 
+        alunos.push(req.body);
+
+        return res.send(req.body);
+    },
+    consultar: (req, res) => {
+        return res.send(alunos);
+    },
     atualizar: (req, res) => {
-        const { id } = req.params;
-        const { nome, idade } = req.body;
-        const atualizado = AlunoModel.atualizar(id, { nome, idade });
-        if (atualizado) {
-            res.send(`Aluno com ID ${id} atualizado com sucesso.`);
-        } else {
-            res.status(404).send(`Aluno com ID ${id} não encontrado.`);
-        }
+
+        const { nome, email, ra } = req.body;
+
+        alunos.filter(item => {
+            if (item.ra == ra) {
+                item.nome = nome;
+                item.email = email;
+                return res.send("Aluno atualizado com sucesso!");
+            }
+        })
+
+        return res.status(400).send("Aluno não encontrado!");
+
     },
-
     deletar: (req, res) => {
-        const { id } = req.params;
-        const deletado = AlunoModel.deletar(id);
-        if (deletado) {
-            res.send(`Aluno com ID ${id} deletado com sucesso.`);
-        } else {
-            res.status(404).send(`Aluno com ID ${id} não encontrado.`);
-        }
-    }
-};
 
-module.exports = AlunoController;
+        const { ra } = req.params;
+
+        const index = alunos.findIndex(item => item.ra == ra);
+
+        if (index === -1) {
+            return res.status(400).send("Ra do aluno não existe")
+        }
+
+        alunos.splice(index, 1);
+
+        return res.send(alunos);
+    },
+    buscaPorRa: (req, res) => {
+
+        const { ra } = req.params;
+
+        const aluno = alunos.filter(item => item.ra == ra);
+
+        if (!aluno.length) {
+            res.status(400).send("Aluno não encontrado!");
+        }
+
+        res.send(aluno);
+
+    }
+})
